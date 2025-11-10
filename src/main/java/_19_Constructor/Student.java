@@ -29,7 +29,8 @@ public class Student {
         boolean korValidation = validateScore(kor);
         boolean engValidation = validateScore(eng);
         boolean mathValidation = validateScore(math);
-        if(!korValidation && !engValidation && !mathValidation) {
+
+        if(!korValidation || !engValidation || !mathValidation) {
             System.out.println("점수는 0-100 이어야 합니다.");
             return; // 원래라면 정의한 에러를 일으켜야 한다.
         }
